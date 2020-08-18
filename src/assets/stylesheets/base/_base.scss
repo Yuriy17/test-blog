@@ -1,0 +1,17 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Proxima Nova Rg', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.hide{
+  display: none;
+}
+
+.wrap{
+  max-width: $max-width;
+  margin: 0 auto;
+}

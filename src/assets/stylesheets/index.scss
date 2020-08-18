@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+  
+@import
+  'abstracts/mixins', 
+  'abstracts/placeholders', 
+  'abstracts/variables'; 
+
+@import
+  'vendors/normalize.min';
+
+@import
+  'base/fonts',
+  'base/base';
+
+@import
+  'pages/index',
+  'pages/blog',
+  'pages/article';
+
+  
+@import
+  'layouts/main';

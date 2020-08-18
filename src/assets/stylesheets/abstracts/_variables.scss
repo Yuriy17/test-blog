@@ -1,0 +1,27 @@
+$primary-color:   #ffffff;
+$secondary-color:   #d2ac67;
+$primary-text-color:   #212529;
+$secondary-text-color:   #707070;
+$primary-background:   #ffffff;
+$secondary-background:   #2b2a29;
+$dark-background: #191919;
+
+
+$max-width: 1240px;
+$content-big-width: 1020px;
+$content-medium-width: 960px;
+$tablet-big-width: 768px;
+$tablet-medium-width: 600px;
+$mobile-width: 375px;
+
+
+$grid-breakpoints: (
+  xs: 0,
+  ss: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) ;
+
+

@@ -1,0 +1,22 @@
+.index-main{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);;
+}
+
+.index-link{
+  display: block;
+  color: $primary-color;
+  background-color: $dark-background;
+  padding: 10px 20px;
+  white-space: nowrap;
+  border-radius: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+
+  &:hover{
+    background-color: $secondary-background;
+  }
+}
