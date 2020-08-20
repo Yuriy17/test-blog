@@ -17,6 +17,10 @@
   'pages/blog',
   'pages/article';
 
-  
 @import
+  'components/custom-select',
+  'components/shopping-cart';
+
+@import
+  'layouts/header',
   'layouts/main';

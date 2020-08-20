@@ -1,0 +1,27 @@
+.shopping-cart {
+  position: relative;
+  margin-right: 25px;
+  cursor: pointer;
+  svg{
+    width: 35px;
+    height: 35px;
+    fill: $primary-color;
+  }
+}
+.shopping-circle {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 0%;
+  left: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $warning-color;
+}
+.shopping-number {
+  font-size: 1.2rem;
+  color:$primary-color;
+  font-weight: bold;
+}

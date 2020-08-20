@@ -1,0 +1,112 @@
+.custom-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  &-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+    margin: 0 10px 0 25px;
+    .arrow {
+      position: relative;
+      height: 7px;
+      width: 7px;
+      margin-left: 8px;
+    }
+    .arrow::before,
+    .arrow::after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      width: 0.15rem;
+      height: 100%;
+      transition: all 0.5s;
+    }
+    .open .arrow::before {
+      left: -2px;
+      transform: rotate(45deg);
+    }
+    .open .arrow::after {
+      left: 2px;
+      transform: rotate(-45deg);
+    }
+    .arrow::before {
+      left: -2px;
+      transform: rotate(-45deg);
+      background-color: $secondary-color;
+    }
+    .arrow::after {
+      left: 2px;
+      transform: rotate(45deg);
+      background-color: $secondary-color;
+    }
+  }
+  &__trigger {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primary-color;
+    height: 60px;
+    line-height: 60px;
+    background-color: $dark-background;
+
+    border-width: 2px ;
+    border-style: solid;
+    border-color: $dark-background;
+    cursor: pointer;
+    &:hover{
+      background-color: $third-background;
+      border-color: $secondary-color;
+    }
+  }
+
+
+
+  &.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+.custom-options {
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: $dark-background;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.custom-option {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 10px;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: $primary-color;
+  line-height: 60px;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    cursor: pointer;
+    background-color: $third-background;
+  }
+  &.selected {
+    color: $primary-color;
+    background-color: $active-color;
+  }
+}

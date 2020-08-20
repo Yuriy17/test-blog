@@ -49,13 +49,44 @@ const config = {
         use: ['babel-loader', 'eslint-loader'],
         exclude: [/node_modules/],
       },
+     {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/images',
+              name: '[name].[ext]',
+            }
+          },
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [
+                {removeTitle: true},
+                {convertColors: {shorthex: false}},
+                {convertPathData: false}
+              ]
+            }
+          }]
+      }, 
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            outputPath: 'assets/images',
+            name: '[name].[ext]',
+          },
+        }],
+      },
       {
         test: /\.css$/,
         use: [
           'style-loader',
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: 'css-loader?url=false',
             options: {
               sourceMap: true,
             },
@@ -89,6 +120,7 @@ const config = {
           },
         ],
       },
+
       {
         test: /\.(woff|woff2|ttf|otf|eot)$/,
         use: [
