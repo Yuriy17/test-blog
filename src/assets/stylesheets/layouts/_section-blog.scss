@@ -1,0 +1,226 @@
+.blog {
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: block;
+
+  &-title {
+    box-sizing: border-box;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #333;
+    display: block;
+    margin-top: 52px;
+    text-align: center;
+    font-size: 5.7rem;
+    font-weight: 300;
+    letter-spacing: -3px;
+    b {
+      font-weight: bold;
+      letter-spacing: -5px;
+      font-style: italic;
+    }
+  }
+  &-subtitle {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  &-tags {
+    margin-top: 45px;
+    &__title {
+      text-align: center;
+
+      font-size: 14px;
+    }
+    .blog-post__tags {
+      ul {
+        margin: 10px auto;
+        justify-content: center;
+        max-width: 500px;
+        li {
+          a {
+            padding: 7px 26px;
+            line-height: 1;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  
+  &-items {
+    margin-top: 29px;
+    max-width: 1058px;
+  }
+
+  //.blog-post
+
+  &-post {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 74px;
+    &__image {
+      height: 280px;
+      width: 100%;
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      margin-top: 18px;
+      margin-bottom: 2px;
+      color: #707070;
+      font-weight: 700;
+    }
+
+    &__date {
+      color: #707070;
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+      letter-spacing: 0.6px;
+    }
+
+    &__content {
+      margin-bottom: 15px;
+      margin-right: 20px;
+      p {
+        margin: 0;
+        color: #707070;
+        font-size: 15.6px;
+        letter-spacing: 0.2px;
+        line-height: 22px;
+      }
+    }
+
+    &__link {
+      max-width: 100%;
+      border-radius: 13px;
+      border: 1px solid #000;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      a {
+        font-size: 1.6rem;
+        color: #000;
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 20px 0;
+        transition: all 0.3s ease;
+      }
+    }
+
+    &>.blog-post__tags {
+      margin-bottom: 6px;
+    }
+
+    &:not(:only-child) {
+      width: calc(50% - 25px);
+    }
+    &:first-child {
+      width: 100%;
+      margin-bottom: 92px;
+      .blog-post__image {
+        height: 100%;
+        max-height: 580px;
+        @include media-medium-laptop {
+          max-height: 158px;
+        }
+      }
+      .blog-post__tags {
+        margin: 9px 0 18px 0;
+        ul {
+         
+          li a {
+            padding: 7px 26px;
+            font-size: 14px;
+          }
+        }
+      }
+      .blog-post__link {
+        max-width: 537px;
+        a {
+          font-size: 18px;
+          padding: 17px 0px;
+        }
+      }
+      .blog-post__title {
+        font-size: 3.8rem;
+        margin-top: 26px;
+        margin-bottom: 2px;
+      }
+      .blog-post__date {
+        margin-bottom: 23px;
+      }
+      .blog-post__content {
+        margin-bottom: 28px;
+        margin-right: 20px;
+        p {
+          font-size: 19px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+
+  &-wrapper {
+    margin: 0 auto 13px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &.blog-item {
+      max-width: 1073px;
+      margin-top: 83px;
+      .blog-post__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-height: 680px;
+    }
+    }
+  }
+  &-post__tags {
+    margin: 0;
+    ul {
+      margin: 0;
+      list-style-type: none;
+      padding: 0;
+      flex-wrap: wrap;
+      display: flex;
+
+      li {
+        color: #707070;
+        font-size: 10px;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-bottom: 6px;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        a {
+          color: #707070;
+          text-decoration: none !important;
+          background-color: #ececec;
+          border-radius: 12.5px;
+          line-height: 1;
+          display: block;
+
+          padding: 5px 23px 6px 23px;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

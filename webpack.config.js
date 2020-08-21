@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const ENV = process.env.npm_lifecycle_event;
@@ -151,7 +152,12 @@ const config = {
     new HtmlWebPackPlugin({
       filename: 'article.html',
       template: './src/pages/article.html'
-    })
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/assets/images', to: 'assets/images' },
+      ],
+    }),
   ],
 
   devServer: {

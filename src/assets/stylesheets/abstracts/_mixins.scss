@@ -14,10 +14,12 @@
     }
 }
 
-@mixin media-laptop {
+@mixin media-max-laptop {
     @media (max-width: $content-big-width) { @content; }
 }
-
+@mixin media-laptop {
+    @media (max-width: $content-width) { @content; }
+}
 @mixin media-medium-laptop {
     @media (max-width: $content-medium-width) { @content; }
 }

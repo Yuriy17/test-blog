@@ -18,9 +18,14 @@
   'pages/article';
 
 @import
-  'components/custom-select',
-  'components/shopping-cart';
+'components/custom-select',
+'components/swiper',
+'components/shopping-cart';
 
 @import
-  'layouts/header',
+'layouts/header',
+'layouts/footer',
+'layouts/section-breadcrumbs',
+'layouts/section-blog',
+  'layouts/prefooter',
   'layouts/main';

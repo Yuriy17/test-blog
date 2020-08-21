@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'Proxima Nova Rg', Arial, Helvetica, sans-serif;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
   font-weight: normal;
   background-color: whitesmoke;
 }
@@ -19,5 +19,7 @@ a {
 
 .wrap{
   max-width: $max-width;
+  padding: 0 20px;
   margin: 0 auto;
+  box-sizing: border-box;
 }

@@ -1,0 +1,104 @@
+.footer {
+  margin: 0;
+  box-sizing: border-box;
+  display: block;
+  background: #000;
+  color: #999;
+  background-color: #2b2a29;
+  padding: 8px 0 23px 0;
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .foot__menu {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-right: 12px;
+        a {
+          color: $primary-color;
+          text-transform: uppercase;
+          font-size: 1.1rem;
+        }
+      }
+    }
+    .shipping-description {
+      max-width: 120px;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      color: #fff;
+      text-align: right;
+    }
+  }
+  &-bottom {
+    display: flex;
+    width: 100%;
+
+    margin-top: 0;
+    .socials__list {
+      display: flex;
+      width: 15%;
+      margin-top: 11px;
+      justify-content: space-around;
+      align-items: center;
+
+      .social-fb > img {
+        width: 13.7px;
+      }
+      .social-yt > img {
+        width: 23px;
+      }
+      .social-tw > img {
+        width: 20px;
+      }
+      .social-ig > img {
+        width: 24px;
+      }
+    }
+    .qa {
+      margin-left: 11.2%;
+      margin-top: 4px;
+
+      p {
+        margin: 0 0 0 0;
+        font-size: 1.1rem;
+        color: $primary-color;
+        a {
+          display: block;
+          color: #d7b56d;
+          margin-top: 3px;
+        }
+      }
+    }
+    .shipping-logo {
+      margin-left: auto;
+      margin-top: 12px;
+      svg {
+        width: 192px;
+      }
+    }
+  }
+  .mobile-copy {
+    display: none;
+    p {
+      margin: 0;
+      padding: 0;
+      color: #d7b56d;
+      font-size: 1rem;
+      text-align: center;
+      z-index: 2;
+    }
+  }
+  @include media-max-laptop {
+    .mobile-copy {
+      display: block;
+    }
+  }
+}
